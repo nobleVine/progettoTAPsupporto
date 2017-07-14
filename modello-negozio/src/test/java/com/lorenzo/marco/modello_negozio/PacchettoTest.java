@@ -34,9 +34,9 @@ public class PacchettoTest {
 		pacchetto = creazionePacchetto("Pacchetto", "Pacchetto basket");
 		pacchetto.aggiungiProdotto(prodotto);
 		assertEquals(1, pacchetto.numProdotti());
-		assertEquals("Maglietta", pacchetto.getPacchetto().get(0).getNome());
-		assertEquals(50, pacchetto.getPacchetto().get(0).getPrezzo(), 0);
-		assertEquals("Maglietta basket", pacchetto.getPacchetto().get(0).getDescrizione());
+		assertEquals("Maglietta", pacchetto.getListaProdottiSingoli().get(0).getNome());
+		assertEquals(50, pacchetto.getListaProdottiSingoli().get(0).getPrezzo(), 0);
+		assertEquals("Maglietta basket", pacchetto.getListaProdottiSingoli().get(0).getDescrizione());
 	}
 
 	@Test

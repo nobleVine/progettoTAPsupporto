@@ -1,44 +1,24 @@
 package com.lorenzo.marco.modello_negozio;
 
-public class Prodotto {
-
-	private String nome;
-	private double prezzo;
-	private String descrizione;
+public class Prodotto extends ModelloProdotti{
 
 	public Prodotto(String nome, double prezzo, String descrizione) {
-		controlloParametriProdotto(nome, prezzo, descrizione);
-	}
-
-	public String getNome() {
-		return nome;
+		super(nome, descrizione);
+		super.controlloParametriProdotti(nome, descrizione);
+		controlloPrezzo(prezzo);
 	}
 
 	public double getPrezzo() {
 		return prezzo;
 	}
 
-	public String getDescrizione() {
-		return descrizione;
-	}
-
-	private void controlloParametriProdotto(String nome, double prezzo, String descrizione) {
-		if (nome == "" || nome == null) {
-			throw new IllegalArgumentException("Il nome del prodotto non può essere vuoto");
-		} else {
-			this.nome = nome;
-		}
-
+	@Override
+	public void controlloPrezzo(double prezzo) {
 		if (prezzo > 0) {
-			this.prezzo = prezzo;
+			super.prezzo = prezzo;
 		} else {
 			throw new IllegalArgumentException("Il prezzo minimo deve essere maggiore di zero");
 		}
-
-		if (descrizione == "" || descrizione == null) {
-			throw new IllegalArgumentException("La descrizione del prodotto non può essere vuoto");
-		} else {
-			this.descrizione = descrizione;
-		}
+		
 	}
 }
