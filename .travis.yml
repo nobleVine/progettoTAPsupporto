@@ -24,3 +24,4 @@ script:
   elif [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
     mvn -f com.lorenzo.marco.modello-negozio/pom.xml clean verify;
 fi
+
