@@ -23,13 +23,22 @@ public class Prodotto {
 	}
 
 	private void controlloParametriProdotto(String nome, double prezzo, String descrizione) {
-		this.nome = nome;
+		if (nome == "" || nome == null) {
+			throw new IllegalArgumentException("Il nome del prodotto non può essere vuoto");
+		} else {
+			this.nome = nome;
+		}
+
 		if (prezzo > 0) {
 			this.prezzo = prezzo;
 		} else {
 			throw new IllegalArgumentException("Il prezzo minimo deve essere maggiore di zero");
 		}
-		this.descrizione = descrizione;
-	}
 
+		if (descrizione == "" || descrizione == null) {
+			throw new IllegalArgumentException("La descrizione del prodotto non può essere vuoto");
+		} else {
+			this.descrizione = descrizione;
+		}
+	}
 }
