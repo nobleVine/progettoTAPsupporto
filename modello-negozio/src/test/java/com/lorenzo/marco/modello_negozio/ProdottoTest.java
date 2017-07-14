@@ -32,27 +32,27 @@ public class ProdottoTest {
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testNomeNonVuoto(){
+	public void testNomeNonVuoto() {
 		prodotto = creazioneProdotto(null, 5, "Maglietta basket");
 	}
-	
+
 	@Test(expected = IllegalArgumentException.class)
-	public void testDescrizioneNonVuoto(){
+	public void testDescrizioneNonVuoto() {
 		prodotto = creazioneProdotto("Maglietta", 5, "");
 	}
-	
+
 	@Test
 	public void testTipoNome() {
 		prodotto = creazioneProdotto("Maglietta", 1, "Maglietta basket");
 		assertTrue(prodotto.getNome() instanceof String);
 	}
-	
-	/*@Test
-	public void testTipoPrezzo() {
-		prodotto = creazioneProdotto("Maglietta", 1, "Maglietta basket");
-		assertTrue(prodotto.getPrezzo() );
-	}*/
-	
+
+	/*
+	 * @Test public void testTipoPrezzo() { prodotto =
+	 * creazioneProdotto("Maglietta", 1, "Maglietta basket");
+	 * assertTrue(prodotto.getPrezzo() ); }
+	 */
+
 	@Test
 	public void testTipoDescrizione() {
 		prodotto = creazioneProdotto("Maglietta", 1, "Maglietta basket");
