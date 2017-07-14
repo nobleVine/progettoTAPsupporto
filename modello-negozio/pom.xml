@@ -11,7 +11,7 @@
 	<url>http://maven.apache.org</url>
 
 	<!-- PROP -->
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jacoco.data.file>${project.build.directory}/coveragereports/jacoco.exec</jacoco.data.file>
@@ -110,6 +110,16 @@
 						<version>2.19.1</version>
 						<configuration>
 							<argLine>${surefireArgLine}</argLine>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.eluder.coveralls</groupId>
+						<artifactId>coveralls-maven-plugin</artifactId>
+						<version>4.3.0</version>
+						<configuration>
+							<jacocoReports>
+								<jacocoReport>${jacoco.report.path}/jacoco.xml</jacocoReport>
+							</jacocoReports>
 						</configuration>
 					</plugin>
 				</plugins>
