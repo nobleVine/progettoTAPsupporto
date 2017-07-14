@@ -2,4 +2,4 @@ language: java
 # skip installation step
 install: true
 script:
-- mvn -f com.lorenzo.marco.modello-negozio/pom.xml clean verify
+- mvn -f com.lorenzo.marco.negozio/pom.xml clean verify
