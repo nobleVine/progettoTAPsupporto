@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.lorenzo.marco</groupId>
-	<artifactId>modello-negozio</artifactId>
+	<artifactId>negozio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>modello-negozio</name>
+	<name>negozio</name>
 	<url>http://maven.apache.org</url>
 
 	<!-- PROP -->
@@ -115,7 +115,7 @@
 					<plugin>
 						<groupId>org.eluder.coveralls</groupId>
 						<artifactId>coveralls-maven-plugin</artifactId>
-						<version>4.3.0</version>
+						<version>4.3.0</version><!--$NO-MVN-MAN-VER$-->
 						<configuration>
 							<jacocoReports>
 								<jacocoReport>${jacoco.report.path}/jacoco.xml</jacocoReport>
